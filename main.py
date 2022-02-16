@@ -6,8 +6,8 @@ class MainClass:
     variable = "Class variable"
 
     @my_decorator3
-    def __init__(self, value):
-        self.dummy = Dummy(value)
+    def __init__(self, dummy):
+        self.dummy = dummy
 
     @my_decorator
     def method1(self, value):
@@ -19,7 +19,8 @@ class MainClass:
 
 
 if __name__ == "__main__":
-    main = MainClass("Dummy Main")
+    dummy = Dummy("Dummy Main")
+    main = MainClass(dummy)
     main.method1("method1")
     print("====================")
     main.method2("method2")

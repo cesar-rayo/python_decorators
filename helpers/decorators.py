@@ -33,6 +33,7 @@ def my_decorator3(func):
     def wrapper(*args, **kwargs):
         print("Running decorator3")
         print(args[0].variable)
+        print(args[1].do_something())
         print("Finish")
         return func(*args, **kwargs)
     return wrapper
