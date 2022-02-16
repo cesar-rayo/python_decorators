@@ -1,9 +1,11 @@
-from helpers.decorators import my_decorator, my_decorator2
+from helpers.decorators import my_decorator, my_decorator2, my_decorator3
 from dummy import Dummy
 
 
 class MainClass:
+    variable = "Class variable"
 
+    @my_decorator3
     def __init__(self, value):
         self.dummy = Dummy(value)
 

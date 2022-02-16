@@ -1,4 +1,4 @@
-# Python Decoratos
+# Python Decorators
 
 Output:
 ```shell

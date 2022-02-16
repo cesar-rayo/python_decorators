@@ -26,3 +26,13 @@ def my_decorator2(num_times):
             return func(*args, **kwargs)
         return wrapper
     return decorator2
+
+
+def my_decorator3(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        print("Running decorator3")
+        print(args[0].variable)
+        print("Finish")
+        return func(*args, **kwargs)
+    return wrapper
